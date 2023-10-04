@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: baraniajpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: baraniajpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: baraniajpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: baraniajpipelinesjavascriptdocker 
+          image: dockercontreg07.azurecr.io/baraniajpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
